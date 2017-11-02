@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  isShowRecipeSection = true;
+  isShowShoppingSection = false;
+
+  showSelectedSection(event) {
+    if (event === 'recipes') {
+      this.isShowRecipeSection = true;
+      this.isShowShoppingSection = false;
+    }else {
+      this.isShowRecipeSection = false;
+      this.isShowShoppingSection = true;
+    }
+  }
 }
