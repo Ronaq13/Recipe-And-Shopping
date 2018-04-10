@@ -3,11 +3,6 @@
     <app-recipe-list></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail [selectedRecipe]="clickedRecipeInRecipeList"
-                       *ngIf="clickedRecipeInRecipeList;else ifNoSelectedRecipe"></app-recipe-detail>
-    <ng-template #ifNoSelectedRecipe>
-      <hr>
-      <h3>Please select a recipe</h3>
-    </ng-template>
+    <router-outlet></router-outlet>
   </div>
 </div>
